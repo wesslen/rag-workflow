@@ -1,6 +1,7 @@
 """
 This module provides the test fixtures for RAG testing with LlamaIndex.
 """
+import os
 import pytest
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
@@ -9,6 +10,10 @@ from pathlib import Path
 import shutil
 import tempfile
 
+# Set API Keys
+api_base = os.getenv("BASE_URL")
+api_key = os.getenv("API_KEY")
+
 class RAGTestEngine:
     """Wrapper class for RAG functionality to make testing easier."""
     
@@ -16,8 +21,8 @@ class RAGTestEngine:
                  content_path: str,
                  model_path: str = "/models/NousResearch/Meta-Llama-3.1-8B-Instruct",
                  embed_model_name: str = "BAAI/bge-small-en-v1.5",
-                 api_base: str = BASE_URL,
-                 api_key: str = API_KEY):
+                 api_base: str = api_base,
+                 api_key: str = api_key):
         """Initialize the RAG engine.
         
         Args:
