@@ -200,6 +200,41 @@ except ProcessingError as e:
     print(evaluator.stats['errors'])
 ```
 
+## Test Cases Overview
+
+Test case generation for RAG system provides automated validation of retrieval quality.
+
+Creates a first round of generating synthetic test cases, which could be filtered down manually to improve tests' quality.
+
+Possible improvements include:
+
+```markdown
+### Synthetic Test Cases
+- Generated from document chunks for baseline evaluation
+- Include direct queries, paraphrased questions, edge cases
+- Focus on high-priority topics like metrics, feedback loops, implementation steps
+
+### Test Parameters
+Test combinations of:
+- Chunking strategies (recursive vs fixed-length, overlap 0.1-0.3)
+- Embedding models (MiniLM, MPNet, BGE-M3)
+- Retrieval settings (k=2-5)
+
+### Evaluation Metrics
+- Precision/recall per topic cluster
+- Retrieval latency (<2s target)
+- Coverage of key concepts
+- Memory efficiency
+
+Key topics for testing:
+- RAG implementation steps
+- Metrics & evaluation methods  
+- Data collection & analysis
+- Continuous improvement cycle
+
+For setup and usage instructions, see the test generator in [`03_unit_tests.ipynb`](03_unit_tests.ipynb)
+```
+
 ## License
 
 MIT License
