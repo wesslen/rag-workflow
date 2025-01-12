@@ -206,12 +206,14 @@ Test case generation for RAG system provides automated validation of retrieval q
 
 Creates a first round of generating synthetic test cases, which could be filtered down manually to improve tests' quality.
 
+View [`tests/test_rag_retrieval.py`](tests/test_rag_retrieval.py) to view the automated tests. 
+
 Possible improvements include:
 
 ### Synthetic Test Cases
 - Generated from document chunks for baseline evaluation
 - Include direct queries, paraphrased questions, edge cases
-- Focus on high-priority topics like metrics, feedback loops, implementation steps
+- Focus on high-priority topics like additional metrics, feedback loops, implementation steps
 
 ### Test Parameters
 Test combinations of:
