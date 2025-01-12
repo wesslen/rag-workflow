@@ -208,7 +208,6 @@ Creates a first round of generating synthetic test cases, which could be filtere
 
 Possible improvements include:
 
-```markdown
 ### Synthetic Test Cases
 - Generated from document chunks for baseline evaluation
 - Include direct queries, paraphrased questions, edge cases
@@ -233,7 +232,6 @@ Key topics for testing:
 - Continuous improvement cycle
 
 For setup and usage instructions, see the test generator in [`03_unit_tests.ipynb`](03_unit_tests.ipynb)
-```
 
 ## License
 
